@@ -11,25 +11,32 @@
   </head>
   <body>
     <navigation>
+<!--links related to content-->
       <div style="margin: 4px;"><a>link</a></div>
       <div style="margin: 4px;"><a>link</a></div>
       <div style="margin: 4px;"><a>link</a></div>
       <div style="margin: 4px;"><a>link</a></div>
     </navigation>
     <centerpanel>
-      <h1 class="title"><rumble><shudder>DE6K</shudder></rumble></h1>
-      <toplinks>
-        <div style="margin: 4px;"><a>link</a></div>
-        <div style="margin: 4px;"><a>link</a></div>
-        <div style="margin: 4px;"><a>link</a></div>
-        <div style="margin: 4px;"><a>link</a></div>
-      </toplinks>
+      <div id="navbar"></div>
       <content>
-        Work in progress site for my projects and me.
-        <img src="assets/kirby-spin-kss.gif">
+<!--content start--->
+        <h2><img src="assets/kirby-spin-kss.gif"> Home <img src="assets/kirby-spin-kss.gif"></h2>
+
+        <div><p>Work in progress site for my projects and me.</p></div>
+<!--content end-->
       </content>
     </centerpanel>
 
+<!--script section-->
+    <script>
+      fetch("/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+    </script>
+<!--eof-->
   </body>
 
 </html>

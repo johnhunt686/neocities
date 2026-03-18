@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: '0xProto';
     background-color: #764700;
-    background-image: url('background.png');
+    background-image: url('assets/background.png');
     background-repeat: repeat;
     background-size: 5%;
     flex-direction: column;
@@ -20,13 +20,15 @@ centerpanel{
     margin: auto;
 }
 toplinks{
-    background-image: url('worms.png');
+    background-image: url('assets/worms.png');
     text-decoration: underline;
     justify-content: center;
     flex-direction: row;
     display: flex;
     color: antiquewhite;
     padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 navigation{
     float: left;
@@ -38,24 +40,35 @@ navigation{
     width: 16%;
     height: auto;
     line-height: 30px;
+    border-radius: 10px;
 }
 content{
     display: flex;
+    flex-direction: column;
     width: auto;
     height: 100%;
     background-color: #aa6d13;
     padding: 2%;
     color: antiquewhite;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 a{
     color: antiquewhite;
 }
 
 /*convienenence classes*/
-.title{
+h1{
     font-size: xxx-large;
     text-align: center;
     color: antiquewhite;
+}
+h2{
+    font-size: xx-large;
+    display: inline-block;
+    text-align: center;
+    color: antiquewhite;
+    margin: 1px;
 }
 .border{
     border: solid;
