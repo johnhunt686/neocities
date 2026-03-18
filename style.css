@@ -1,46 +1,65 @@
+@font-face {
+    font-family: '0xProto';
+    src: url(0xProtoNerdFont/0xProtoNerdFont-Regular.ttf);
+}
 body {
     margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #de6000;
-}
-footer {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #9b4300;
-    font-size: medium;
-    width: 80%;
-    height: 10vh;
-    display: flex;
+    font-family: '0xProto';
+    background-color: #764700;
+    background-image: url('background.png');
+    background-repeat: repeat;
+    background-size: 5%;
     flex-direction: column;
-    margin: 0 auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
-footerbody{
+
+/*custom whatever they're called*/
+centerpanel{
+    width: 50%;
     margin: auto;
 }
-header {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #9b4300;
-    font-size: medium;
-    width: 80%;
-    height: 20vh;
+toplinks{
+    background-image: url('worms.png');
+    text-decoration: underline;
+    justify-content: center;
+    flex-direction: row;
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    color: antiquewhite;
+    padding: 10px;
 }
-headerbody{
-    margin: auto;
-}
-.content{
-    font-size: medium;
-    width: 80%;
+navigation{
+    float: left;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 2%;
+    padding: 10px;
+    background-color:rgb(90, 58, 16);
+    width: 16%;
     height: auto;
+    line-height: 30px;
+}
+content{
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    background-color: white;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    width: auto;
+    height: 100%;
+    background-color: #aa6d13;
+    padding: 2%;
+    color: antiquewhite;
+}
+a{
+    color: antiquewhite;
+}
+
+/*convienenence classes*/
+.title{
+    font-size: xxx-large;
+    text-align: center;
+    color: antiquewhite;
+}
+.border{
+    border: solid;
+    border-color: #aa6d13;
+    border-width: 10px;
+    border-radius: 10px;   
 }
