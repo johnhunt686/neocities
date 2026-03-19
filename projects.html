@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DE6K</title>
+    <!--stylesheets :3 -->
+    <link href="transitions.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    
+  </head>
+  <body>
+    <navigation>
+<!--links related to content-->
+      <div style="margin: 4px;"><a>link1</a></div>
+      <div style="margin: 4px;"><a>link2</a></div>
+      <div style="margin: 4px;"><a>link3</a></div>
+      <div style="margin: 4px;"><a>link4</a></div>
+    </navigation>
+    <centerpanel>
+      <div id="navbar"></div>
+      <content>
+<!--content start--->
+        <h2>projects</h2>
+        <div><p>This is where projects will live, for now it is under contruction</p></div>
+<!--content end-->
+      </content>
+    </centerpanel>
+
+<!--script section-->
+    <script>
+      fetch("/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+    </script>
+<!--eof-->
+  </body>
+
+</html>
