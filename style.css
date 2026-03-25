@@ -70,6 +70,13 @@ h2{
     color: antiquewhite;
     margin: 1px;
 }
+h3{
+    font-size: x-large;
+    display: inline-block;
+    text-align: center;
+    color: antiquewhite;
+    margin: 1px;
+}
 .border{
     border: solid;
     border-color: #aa6d13;
