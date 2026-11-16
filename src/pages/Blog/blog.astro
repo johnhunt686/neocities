@@ -1,0 +1,37 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+const posts = [
+  {
+    filename: "4-7-2026.html",
+    title: "Local AI - Demystified",
+    summary: "A guide to set up your own local-AI without spending any money",
+  },
+  {
+    filename: "4-2-2026.html",
+    title: "Servers, and the dangers of being unprepared.",
+    summary: "A dramaticized telling of my struggles with being a sys-admin.",
+  },
+  {
+    filename: "3-29-2026.html",
+    title: "The blog is born.",
+    summary: "A short summary of my thoughts on blogging, and the methodology I intend to implement.",
+    image: "/Blog/3-29-2026.png",
+  },
+];
+---
+
+<SiteLayout title="DE6K - Blog" blogStyles>
+  <h2>Blog</h2>
+  <div class="blog-grid">
+    {posts.map((post) => (
+      <a class="blog-card" href={`/Blog/${post.filename}`}>
+        {post.image && <img src={post.image} alt="" />}
+        <div>
+          <strong>{post.title}</strong>
+          <p>{post.summary}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</SiteLayout>

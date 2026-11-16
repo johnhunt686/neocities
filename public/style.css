@@ -30,6 +30,10 @@ toplinks{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+toplinks > div,
+navigation > div > div{
+    margin: 4px;
+}
 navigation{
     float: left;
     position: absolute;

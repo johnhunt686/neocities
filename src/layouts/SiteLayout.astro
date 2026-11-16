@@ -1,0 +1,32 @@
+---
+import SiteNav from "../components/SiteNav.astro";
+
+interface Props {
+  title?: string;
+  sidebar?: boolean;
+  blogStyles?: boolean;
+}
+
+const { title = "DE6K", sidebar = false, blogStyles = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link href="/transitions.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    {blogStyles && <link href="/Blog/blog.css" rel="stylesheet" />}
+  </head>
+  <body>
+    {sidebar && <navigation><slot name="sidebar" /></navigation>}
+    <centerpanel>
+      <SiteNav />
+      <content>
+        <slot />
+      </content>
+    </centerpanel>
+  </body>
+</html>
