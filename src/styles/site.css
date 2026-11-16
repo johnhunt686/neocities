@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "0xProto";
+  src: url("/0xProtoNerdFont/0xProtoNerdFont-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  font-family: "0xProto", monospace;
+  color: antiquewhite;
+  background: #764700 url("/assets/background.png") repeat;
+  background-size: 5%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+}
+
+.page-layout {
+  width: min(50%, 900px);
+  margin: 0 auto;
+}
+
+.site-header h1 {
+  margin: 0;
+  padding: 0.3em 0;
+  color: antiquewhite;
+  font-size: xxx-large;
+  text-align: center;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  background: url("/assets/worms.png");
+}
+
+.site-header nav a {
+  margin: 4px;
+}
+
+.content {
+  display: flex;
+  min-height: 15rem;
+  flex-direction: column;
+  padding: 2%;
+  border-radius: 0 0 10px 10px;
+  background: #aa6d13;
+}
+
+.content h1 {
+  color: antiquewhite;
+  font-size: xxx-large;
+  text-align: center;
+}
+
+.content h2 {
+  display: inline-block;
+  margin: 1px;
+  color: antiquewhite;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.content h3 {
+  display: inline-block;
+  margin: 1px;
+  color: antiquewhite;
+  font-size: x-large;
+  text-align: center;
+}
+
+.content h2 img {
+  vertical-align: middle;
+}
+
+.sidebar {
+  position: absolute;
+  width: 16%;
+  margin-top: 15%;
+  margin-left: 2%;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(90 58 16);
+  line-height: 30px;
+}
+
+.sidebar-links > div {
+  margin: 4px;
+}
+
+.border {
+  border: 10px solid #aa6d13;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .page-layout {
+    width: min(92%, 900px);
+  }
+
+  .sidebar {
+    position: static;
+    width: auto;
+    margin: 1rem auto;
+  }
+}

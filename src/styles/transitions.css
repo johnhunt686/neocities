@@ -70,7 +70,7 @@ del
 
 /* Who am I to tell authors not to use non-standard tags? */
 
-center
+.center
 {
 	text-align:center;
 	margin: 0 auto;
@@ -164,14 +164,14 @@ fadein-out
 	-webkit-animation: fade-in-out 2s ease-in-out infinite alternate;
 }
 
-rumble 
+.rumble 
 {
 	-webkit-animation: rumble linear 0.1s 0s infinite;
 	animation: rumble linear 0.1s 0s infinite;
       display:inline-block;
 }
 
-shudder 
+.shudder 
 {
 	-webkit-animation: shudder linear 0.1s 0s infinite;
 	animation: shudder linear 0.1s 0s infinite;

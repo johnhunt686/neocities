@@ -1,15 +1,22 @@
-body{
-    margin: 10%;
-    font-family: '0xProto';
-    background-color: #e9bc79;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
+@font-face {
+    font-family: "0xProto";
+    src: url("/0xProtoNerdFont/0xProtoNerdFont-Regular.ttf") format("truetype");
+    font-display: swap;
 }
-p {
+.blog-post {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem max(1rem, 10%);
+    background: #e9bc79;
+    font-family: "0xProto", monospace;
+}
+.blog-post p {
     font-size: large;
 }
-summary {
+.blog-post summary {
     font-size: large;
 }
 .blog-grid {

@@ -1,4 +1,5 @@
 ---
+import "../../styles/blog.css";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 
 const posts = [
@@ -21,7 +22,7 @@ const posts = [
 ];
 ---
 
-<SiteLayout title="DE6K - Blog" blogStyles>
+<SiteLayout title="DE6K - Blog">
   <h2>Blog</h2>
   <div class="blog-grid">
     {posts.map((post) => (

@@ -1,4 +1,6 @@
 ---
+import "../styles/blog.css";
+
 interface Props {
   title: string;
 }
@@ -12,9 +14,8 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    <link href="/Blog/blog.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="blog-post">
     <slot />
   </body>
 </html>
