@@ -1,14 +1,9 @@
 ---
+import DynamicGrid from "../components/DynamicGrid.astro";
 import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<SiteLayout sidebar>
-  <div slot="sidebar" class="sidebar-links">
-    <div><a>link</a></div>
-    <div><a>link</a></div>
-    <div><a>link</a></div>
-    <div><a>link</a></div>
-  </div>
-  <h2><img src="/assets/kirby-spin-kss.gif" alt="" /> Home <img src="/assets/kirby-spin-kss.gif" alt="" /></h2>
-  <div><p>Work in progress personal site for my projects.</p></div>
+<SiteLayout title="DE6K - Home">
+  <h2>Welcome to my website!</h2>
+  <DynamicGrid directory="/src/pages/Home/"></DynamicGrid>
 </SiteLayout>

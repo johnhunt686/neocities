@@ -23,7 +23,7 @@ a {
 }
 
 .page-layout {
-  width: min(50%, 900px);
+  width: min(80%, 900px);
   margin: 0 auto;
 }
 

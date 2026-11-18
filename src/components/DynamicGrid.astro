@@ -1,0 +1,57 @@
+---
+interface Props {
+  /** Directory path relative to the project root (for example, "src/pages/Home"). */
+  directory: string;
+}
+
+type GridComponent = typeof import("./SiteNav.astro")["default"];
+type GridModule = {
+  default: GridComponent;
+  gridPriority?: number;
+};
+
+const { directory } = Astro.props;
+const normalizedDirectory = directory
+  .trim()
+  .replaceAll("\\", "/")
+  .replace(/^\.\/+/, "")
+  .replace(/^\/+/, "")
+  .replace(/^src\//, "")
+  .replace(/\/+$/, "");
+
+if (!normalizedDirectory) {
+  throw new Error("DynamicGrid requires a directory path.");
+}
+
+const components = Object.entries(
+  import.meta.glob<GridModule>("/src/**/*.astro", {
+    eager: true,
+  }),
+)
+  .filter(([path]) => path.startsWith(`/src/${normalizedDirectory}/`))
+  .sort(
+    ([pathA, moduleA], [pathB, moduleB]) =>
+      (moduleA.gridPriority ?? 0) - (moduleB.gridPriority ?? 0) ||
+      pathA.localeCompare(pathB),
+  )
+  .map(([, module]) => module.default);
+---
+
+<div class="dynamic-grid">
+  {components.map((Component) => <Component />)}
+</div>
+
+<style>
+  .dynamic-grid {
+    columns: 12rem;
+    column-gap: 1rem;
+  }
+
+  :global(.dynamic-grid > *) {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    vertical-align: top;
+  }
+</style>
